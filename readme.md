@@ -1,6 +1,6 @@
 # 好きな物発表ドラゴンジェネレーター
 
-[!image](./readme_assets/ohitashi.png)
+![image](./readme_assets/ohitashi.png)
 
 # ※元ネタ
 
