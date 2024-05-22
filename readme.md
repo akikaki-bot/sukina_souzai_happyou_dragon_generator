@@ -18,7 +18,7 @@
 - Console
 
 ```sh
-node dist/console.js "生成したい文字列"
+node dist/console.js "ファイル名" "生成したい文字列"
 ```
 
 - Class Call

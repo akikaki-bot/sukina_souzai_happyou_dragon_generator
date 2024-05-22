@@ -38,9 +38,14 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var node_process_1 = require("node:process");
 var _1 = require(".");
-var text = node_process_1.argv[2];
+var text = node_process_1.argv[3];
+var fileName = node_process_1.argv[2];
+if (!fileName) {
+    console.error(" Usage: node dist/console.js <filename> <text> ");
+    process.exit(1);
+}
 if (!text) {
-    console.error(" Usage: node dist/console.js <text>");
+    console.error(" Usage: node dist/console.js <filename> <text>");
     process.exit(1);
 }
 (function () { return __awaiter(void 0, void 0, void 0, function () {
@@ -50,7 +55,7 @@ if (!text) {
             case 0: return [4 /*yield*/, new _1.DragonSaysLikeAboutSomething(text).draw()];
             case 1:
                 image = _a.sent();
-                require("fs").writeFileSync("output.png", image);
+                require("fs").writeFileSync("".concat(fileName, ".png"), image);
                 return [2 /*return*/];
         }
     });
